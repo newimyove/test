@@ -50,11 +50,12 @@ class Sort:
             self.adjust_max_heap(0, arr_len)
             self.arr[0], self.arr[arr_len - 1] = self.arr[arr_len - 1], self.arr[0]
 
-    def use_time(self, sort_function,*args):
+    def use_time(self, sort_function, *args):
         start = time.time()
         sort_function(*args)
-        end=time.time()
-        print(f'the total time of this function is {end-start}s')
+        end = time.time()
+        print(f'the total time of this function is {end - start}s')
+
 
 if __name__ == '__main__':
     # my_sort = Sort(10000)
@@ -66,13 +67,15 @@ if __name__ == '__main__':
     # # print(my_sort.arr)
     # print(end - start)
     # my_sort.use_time(my_sort.quick_sort,0,10000-1)
-    # list1=[22,11,2,67,90,13]
-    # list2=[22,11,2,67,90,13]
 
     # Python自带排序
 
+    # list1=[22,11,2,67,90,13]
+    # list2=[22,11,2,67,90,13]
     # print(sorted(list1))
     # print(list1)
     # print(list2.sort())
     # print(list2)
 
+    str1=['and','sorr','ANd','test']
+    print(sorted(str1,key=str.lower))
